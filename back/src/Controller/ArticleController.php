@@ -28,9 +28,6 @@ class ArticleController extends AbstractController
         $dateFin = new \DateTime($request->query->get('dateFin'));
         $region = $request->query->get('region');
         $annee = $request->query->get('annee');
-
-
-
          $totalSocialScore = 0;
         $arrayToJson = array();
         $nbAccident = 0;
@@ -52,12 +49,12 @@ class ArticleController extends AbstractController
             $json_article = $objectManager->getRepository(Article::class)->getStatsByYear($annee);
         }
 
-
         foreach ($json_article as $article) {
             if ($region !== null) {
                 foreach ( $article->getDepartements() as $departement) {
                     if ($departement->getRegion()->getName() === $region) {
                         $flag = true;
+                        break;
                     }else {
                         $flag = false;
                     }
