@@ -13,6 +13,7 @@
 ### Back : https://github.com/froger22/hackathon2019
 
 * Docker-compose up -d
+* composer install
 * php bin/console d:d:c
 * php bin/console d:s:u --force
 * php bin/console d:f:l
