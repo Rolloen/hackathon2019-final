@@ -1,0 +1,22 @@
+
+<div class="login-container" ng-if="vm.showModal">
+
+    <div class="login-modal">
+        <i class="far fa-times-circle" ng-click="vm.openModal()"></i>
+        <div class="header">
+            <img src="app/assets/images/logoText.png" alt="Logo text">
+        </div>
+        <div class="form-wrapper">
+            <form>
+                <label for="mail">Email</label>
+                <input type="email" id="mail" ng-model="vm.email" required>
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" ng-model="vm.password" required>
+
+                <input type="submit"  id="submit" ng-click="vm.login()">
+            </form>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+</div>

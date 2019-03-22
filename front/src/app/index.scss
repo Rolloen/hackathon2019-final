@@ -1,0 +1,16 @@
+// bower:scss
+// Bower Sass dependencies will be imported here after Gulp `styles` task.
+// endbower
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin-ext');
+
+body {
+  // font: normal 16px/150% Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+
+}
+
+// inject
+// Input styles will be imported here after Gulp `styles` task.
+// endinject

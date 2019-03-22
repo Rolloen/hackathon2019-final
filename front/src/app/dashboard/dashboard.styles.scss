@@ -1,0 +1,49 @@
+dashboard-page {
+  #map {
+    display: inline-block;
+  }
+  .departement {
+    fill: grey;
+    &:hover {
+      fill: orange;
+    }
+
+    &.selected {
+      fill : orange;
+    }
+  }
+  .infos-wrapper {
+    margin-top: 50px;
+    margin-left: 25px;
+    display: inline-block;
+    vertical-align: top;
+     @media screen and (max-width: 1600px) {
+       width: 100%;
+     }
+      @media screen and (min-width: 1601px) {
+       width: 40%;
+     }
+    .date-selector {
+      display: flex;
+      margin-bottom: 20px;
+      input {
+        margin: 0 5px;
+        font-size: 1.5em;
+        font-weight: 700;
+        border: 1px solid #FF954D;
+        border-radius: 6px;
+        background-color: white;
+        text-align: center;
+        color: #FF954D;
+        flex: 1;
+        &:focus {
+          outline: 0;
+        }
+        &.selected {
+          color: white;
+          background-color: #FF954D;
+        }
+      }
+    }
+  }
+}

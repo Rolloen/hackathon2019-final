@@ -1,0 +1,225 @@
+.home-container {
+  height: 50%;
+  width: 100%;
+  background-image: url("app/assets/images/topPage-bg.png");
+  background-repeat: no-repeat;
+
+  .top-page {
+    height: 760px;
+    text-align: center;
+    position: relative;
+
+
+    img {
+      width: 300px;
+      margin-top: 74px;
+    }
+
+    .sub-text {
+      width: 100%;
+      bottom: 135px;
+      color: white;
+      position: absolute;
+
+      h4 {
+        font-weight: 300;
+      }
+
+      .button {
+        margin-top: 70px;
+        padding: 5px 20px;
+        display: inline-block;
+        font-size: 1.2em;
+        font-weight: 700;
+        background-color: white;
+
+        a {
+          color: #FF954D;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .second-section {
+    padding: 0 20px;
+
+    h2 {
+      text-align: left;
+      color: #FF954D;
+    }
+
+    .desc {
+      margin-top: 15px;
+      padding: 0 20px;
+
+      img {
+        width: 45%;
+      }
+
+      .text {
+
+        float: right;
+        width: 50%;
+        word-break: break-word;
+        font-size: 1.8em;
+
+        span {
+          &:nth-of-type(2) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .third-section {
+    margin-top: 100px;
+    padding: 0 20px;
+    position: relative;
+    text-align: center;
+
+    h2 {
+      position: relative;
+      z-index: 2;
+    }
+
+    .icons-container {
+      margin-top: 30px;
+      display: flex;
+      position: relative;
+      justify-content: space-around;
+      text-align: center;
+      z-index: 2;
+
+      .icon {
+        flex: 1;
+
+        img {
+          height: 200px;
+        }
+
+        p {
+          width: 80%;
+          font-weight: 700;
+          margin: auto;
+        }
+      }
+    }
+
+    .background-img {
+      width: 500%;
+      height: 400px;
+      left: -58%;
+      top: -110px;
+      position: absolute;
+      background-color: #EAEAEA;
+      z-index: 1;
+      transform: rotate(-3deg);
+    }
+  }
+
+  .fourth-section {
+    margin-top: 80px;
+    text-align: center;
+    .picto-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .picto {
+        text-align: center;
+        position: relative;
+        .number {
+          padding: 0px 13px;
+          display: inline-block;
+          position: absolute;
+          font-size: 2em;
+          background-color: #FF954D;
+          span {
+            color: white;
+          }
+        }
+
+        img {
+          height: 200px;
+        }
+
+        .text {
+          .title {
+            margin-bottom: 10px;
+            font-weight: 700;
+          }
+        }
+
+        .my-vr {
+          width: 4px;
+          height: 90px;
+          background-color: #C6C6C6;
+          text-align: center;
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  .last-section {
+    height: 500px;
+    margin-top: 50px;
+    text-align: center;
+    .form-container {
+      height: 100%;
+      position: relative;
+      background-image: url('app/assets/images/contact-bg.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      form {
+        position: absolute;
+        top: 130px;
+        right: 260px;
+        input {
+          height: 30px;
+          padding-left: 5px;
+          border: none;
+        }
+      }
+      label {
+        margin: 0;
+        display: block;
+        font-weight: 700;
+        text-align: left;
+      }
+
+      .firstname , .lastname {
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      .firstname {
+        margin-right: 10px;
+
+      }
+
+      .mail {
+        margin-bottom: 20px;
+        input {
+          width: 100%;
+        }
+      }
+
+      .phone {
+        margin-bottom: 30px;
+        text-align: left;
+      }
+      .submitContact {
+        width: 100%;
+        padding: 2px 0;
+        font-weight: 500;
+        font-size: 1.3em;
+        color: white;
+        background-color: #FF954D;
+      }
+    }
+  }
+}

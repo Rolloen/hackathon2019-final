@@ -1,0 +1,138 @@
+
+<div class="stats-container container">
+    <!-- <h3>Région : {{ vm.region.nom }}</h3> -->
+
+    <div class="row double-card">
+        <div class="card date-card">
+            <h3>
+                <i class="far fa-calendar-alt"></i>
+                <div class="title">
+                    <span>Date</span>
+                    <span class="underbar"></span>
+                </div>
+            </h3>
+
+            <div class="text">
+                {{ vm.dateLimit }} à Aujourd'hui
+            </div>    
+        </div>
+        <div class="card social-card">
+            <h3>
+                <i class="far fa-star"></i>
+                <div class="title">
+                    <span>Popularité moy.</span>
+                    <span class="underbar"></span>
+                </div>
+            </h3>
+
+            <div class="text">
+                {{ vm.stats.moyenne_social_score | number : 0}} interactions 
+                <span title="Score de partage des articles concernants les accidents"><i class="fas fa-question-circle"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="card position-card col-xs-12">
+            <h3>
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="title">
+                    <span>Zone Géographique</span>
+                    <span class="underbar"></span>
+                </div>
+            </h3>
+
+            <div class="text">
+                <span ng-if="vm.region.nom"> {{ vm.region.nom }}</span>
+                <span ng-if="!vm.region.nom">France</span>
+            </div>    
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="card stats-card col-xs-12">
+            <h3>
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="title">
+                    <span>Statistiques</span>
+                    <span class="underbar"></span>
+                </div>
+            </h3>
+            <div class="text">
+                <div class="total-accidents">
+                    <span ng-if="vm.displayedStats === 'all'">
+                        <span ng-if="vm.stats.nombre_accident"> {{vm.stats.nombre_accident}} </span>
+                        <span ng-if="!vm.stats.nombre_accident"> - </span>
+                    </span>
+
+                    <span ng-if="vm.displayedStats !== 'all'">
+                        <span ng-if="vm.accidentsDisplayed"> {{vm.accidentsDisplayed}} </span>
+                        <span ng-if="!vm.accidentsDisplayed"> - </span>
+                    </span>
+
+                    <span ng-if="vm.displayedStats === 'all'">accidents médiatisés</span>
+                    <span ng-if="vm.displayedStats !== 'all'">articles</span>
+                </div>
+
+                <h6>dont</h6>
+                <div class="deadly-accidents">
+                    <span ng-if="vm.displayedStats === 'all'">
+                        <span ng-if="vm.stats.nombre_accident_grave"> {{ vm.stats.nombre_accident_grave }} </span>
+                        <span ng-if="!vm.stats.nombre_accident_grave"> - </span>
+                    </span>
+                    <span ng-if="vm.displayedStats !== 'all'">
+                        <span ng-if="vm.accidentsDisplayedGrave"> {{ vm.accidentsDisplayedGrave }} </span>
+                        <span ng-if="!vm.accidentsDisplayedGrave"> - </span>
+                    </span>
+
+                    <span>accidents graves</span>
+                </div>
+            </div>
+
+            <div class="filter-container">
+                <div class="filter-wrap">
+                    <div class="filter train" ng-click="vm.changeDisplayedStats('train')" ng-class="{ selected : vm.isActivatedFilter('train')}">
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <div class="filter car" ng-click="vm.changeDisplayedStats('voiture')" ng-class="{ selected : vm.isActivatedFilter('voiture')}">
+                        <i class="fas fa-car-alt"></i>
+                    </div>
+                    <div class="filter airplane" ng-click="vm.changeDisplayedStats('avion')" ng-class="{ selected : vm.isActivatedFilter('avion')}">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="filter bike" ng-click="vm.changeDisplayedStats('moto')" ng-class="{ selected : vm.isActivatedFilter('moto')}">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                </div>
+                <div class="reset" ng-click="vm.clearAllFilter()">Réinitialiser</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="show-graph-btn" ng-click="vm.changeShowGraph()">
+            <div ng-if="!vm.showGraph">Afficher plus</div>
+            <i class="fas fa-chevron-circle-down" ng-if="!vm.showGraph"></i>
+            <div ng-if="vm.showGraph">Afficher moins</div>
+            <i class="fas fa-chevron-circle-up" ng-if="vm.showGraph"></i>
+        </div>
+        <div class="card graph-card col-xs-12" ng-show="vm.showGraph">
+            <h3>
+                <i class="fas fa-chart-bar"></i>
+                <div class="title">
+                    <span>Bilan</span>
+                    <span class="underbar"></span>
+                </div>
+            </h3>
+
+            <svg id="graphique" style="width:100%;" height="300" width="800" >
+
+            </svg>
+
+            <div class="c_chart"></div>
+        </div>
+    </div>
+
+</div>
+
+

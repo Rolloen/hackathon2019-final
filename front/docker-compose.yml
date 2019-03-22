@@ -1,0 +1,9 @@
+version: '3.1'
+
+services:
+    app:
+        image: 'my-angular-app'
+        volumes:
+            - './dist:/usr/share/nginx/html'
+        ports:
+            - 8000:80

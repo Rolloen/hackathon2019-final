@@ -1,0 +1,23 @@
+<header></header>
+<div id="map"></div>
+
+<div class="infos-wrapper">
+    <div class="date-selector">
+        <input type="button" ng-class="{selected : vm.selectedDate === '1week'}" 
+        ng-click="vm.changeSelectedDate('1week', 1, 'weeks')"value="1 Semaine"></input>
+
+        <input type="button" ng-class="{selected : vm.selectedDate === '1month'}"
+        ng-click="vm.changeSelectedDate('1month', 1, 'months')" value="1 Mois"></input>
+
+        <input type="button" ng-class="{selected : vm.selectedDate === '3months'}"
+        ng-click="vm.changeSelectedDate('3months', 3, 'months')" value="3 Mois"></input>
+
+        <input type="button" ng-class="{selected : vm.selectedDate === '6months'}"
+        ng-click="vm.changeSelectedDate('6months', 6, 'months')" value="6 Mois"></input>
+
+        <input type="button" ng-class="{selected : vm.selectedDate === '1year'}"
+        ng-click="vm.changeSelectedDate('1year', 1, 'years')" value="1 An"></input>
+
+    </div>
+    <stats region="vm.selectedRegion" stats="vm.stats" date-limit="vm.limitDate"></stats>
+</div>

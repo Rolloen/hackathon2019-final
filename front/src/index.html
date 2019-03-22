@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+    <head>
+        <base href="/">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <title>VizuAlert</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	    <link rel="icon" type="image/png" sizes="16x16" href="/app/assets/images/logo.png">
+
+        <!-- build:css(src) styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- Bower dependencies styles will go here after Gulp `inject` task. -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css(.tmp/serve) styles/app.css -->
+        <!-- inject:css -->
+        <!-- Output styles will go here after Gulp `inject` task. -->
+        <!-- endinject -->
+        <!-- endbuild -->
+
+    </head>
+
+    <body>
+        <!-- <header></header> -->
+          <login></login>
+        <div ui-view=""></div>
+
+        <footer></footer>
+
+        <!-- build:js(src) scripts/vendor.js -->
+        <!-- bower:js -->
+        <!-- Bower dependencies scripts will go here after Gulp `inject` task. -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp/partials,.tmp/serve}) scripts/app.js -->
+
+        <!-- inject:js -->
+        <!-- Scripts will go here after Gulp `inject` task. -->
+        <!-- endinject -->
+
+        <!-- inject:partials -->
+        <!-- Angular templates will be converted to scripts and go here after Gulp `build` task. -->
+        <!-- endinject -->
+
+        <!-- endbuild -->
+        <script src="../bower_components/moment/moment.js"></script>
+        <script src="../bower_components/angular-moment/angular-moment.js"></script>
+        <script src="../bower_components/angular-md5/angular-md5.js"></script>
+        <script src="../bower_components/angular-ui-router/release/stateEvents.min.js"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="//d3js.org/topojson.v1.min.js"></script>
+        
+
+    </body>
+
+</html>
